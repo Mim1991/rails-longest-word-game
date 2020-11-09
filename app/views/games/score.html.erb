@@ -1,0 +1,12 @@
+<h1>Result</h1>
+
+<% if !@compared %>
+  <p> You cannot get <%= @score['word'] %> from <%= @letters_generated %></p>  
+<% elsif @score['found'] %>
+  <p> Nice <strong><%= @score['word'] %></strong> is a valid English word!</p>
+<% else%>
+  <p> Sorry, <strong><%= @score['word'] %></strong> does not seem to be valid</p>
+<% end %>
+
+
+<%= link_to "Play again", new_path %>
